@@ -14,31 +14,56 @@ import SignIn from "./pages/SignIn.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import NoPage from "./pages/NoPage.jsx";
+import Layout from "./components/Layout/Layout.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <Layout>
+        <Home />
+      </Layout>
+    ),
   },
   {
     path: "/about",
-    element: <About />,
+    element: (
+      <Layout>
+        <About />
+      </Layout>
+    ),
   },
   {
     path: "/sign-in",
-    element: <SignIn />,
+    element: (
+      <Layout>
+        <SignIn />
+      </Layout>
+    ),
   },
   {
-    path: "/sign-out",
-    element: <SignUp />,
+    path: "/sign-up",
+    element: (
+      <Layout>
+        <SignUp />
+      </Layout>
+    ),
   },
   {
     path: "/profile",
-    element: <Profile />,
+    element: (
+      <Layout>
+        <Profile />
+      </Layout>
+    ),
   },
   {
     path: "*",
-    element: <NoPage />,
+    element: (
+      <Layout>
+        <NoPage />
+      </Layout>
+    ),
   },
 ]);
 
