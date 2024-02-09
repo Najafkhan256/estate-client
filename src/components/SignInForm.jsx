@@ -30,7 +30,7 @@ const SignInForm = () => {
               type="submit"
               className="text-white bg-gray-700 border-0 py-3 px-6 focus:outline-none hover:bg-gray-600 rounded text-lg w-full uppercase"
             >
-              Sign Up
+              Sign in
             </button>
           </div>
         </form>
