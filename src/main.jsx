@@ -15,8 +15,9 @@ import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import NoPage from "./pages/NoPage.jsx";
 import Layout from "./components/Layout/Layout.jsx";
-import { store } from "./redux/store.js";
+import { persistor, store } from "./redux/store.js";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
+    <PersistGate leading={null} persistor={persistor}></PersistGate>
     <RouterProvider router={router} />
     {/* <App /> */}
   </Provider>
